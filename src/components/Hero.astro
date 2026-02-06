@@ -8,8 +8,8 @@ import Button from './Button.astro';
 		<!-- Left Column - Content -->
 		<div class="hero-content">
 			<h1 class="hero-heading">
-				Protecting First<br />
-				Responders<br />
+				Protecting First<br class="heading-break" />
+				Responders<br class="heading-break" />
 				<span class="highlight">Across the</span>
 			</h1>
 			<div class="last-line-wrapper">
@@ -39,21 +39,21 @@ import Button from './Button.astro';
 					alt="Fire truck with MagneGrip exhaust system"
 					class="hero-image"
 				/>
+			</div>
 
-				<!-- Stats Card -->
-				<div class="stats-card">
-					<div class="stat-item">
-						<div class="stat-number">11</div>
-						<div class="stat-label">STATES COVERED</div>
-					</div>
-					<div class="stat-item">
-						<div class="stat-number">100%</div>
-						<div class="stat-label">EXHAUST CAPTURE</div>
-					</div>
-					<div class="stat-item">
-						<div class="stat-number">#1</div>
-						<div class="stat-label">RATED SOLUTION</div>
-					</div>
+			<!-- Stats Card - Outside image wrapper so it flows naturally -->
+			<div class="stats-card">
+				<div class="stat-item">
+					<div class="stat-number">11</div>
+					<div class="stat-label">STATES COVERED</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-number">100%</div>
+					<div class="stat-label">EXHAUST CAPTURE</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-number">#1</div>
+					<div class="stat-label">RATED SOLUTION</div>
 				</div>
 			</div>
 		</div>
@@ -72,10 +72,11 @@ import Button from './Button.astro';
 
 	.hero-container {
 		max-width: 1420px;
+		width: 100%;
 		margin: 0 auto;
 		display: grid;
-		grid-template-columns: 538px 1fr;
-		gap: 150px;
+		grid-template-columns: 1fr 1fr;
+		gap: 80px;
 		align-items: center;
 	}
 
@@ -88,11 +89,11 @@ import Button from './Button.astro';
 	.hero-heading {
 		font-family: 'Quicksand', sans-serif;
 		font-style: normal;
-		font-size: 75px;
+		font-size: clamp(32px, 5vw, 75px);
 		font-weight: 400;
-		line-height: 65px;
+		line-height: 1.05;
 		color: #FFFFFF;
-		margin: 0 0 0 0;
+		margin: 0;
 		opacity: 0;
 		animation: fadeInUp 0.8s ease-out 0.2s forwards;
 	}
@@ -164,22 +165,23 @@ import Button from './Button.astro';
 
 	/* Right Column - Visual */
 	.hero-visual {
-		max-width: 496px;
 		position: relative;
-		margin-left: 140px;
 		opacity: 0;
 		animation: fadeInRight 1s ease-out 0.3s forwards;
 	}
 
 	.hero-image-wrapper {
 		position: relative;
-		width: 496px;
-		height: 498px;
+		width: 100%;
+		max-width: 496px;
+		aspect-ratio: 1;
 		background: var(--bg-dark);
 		border-radius: var(--border-radius-lg);
 		padding: 8px;
 		box-shadow: 6px 4px 76.3px -6px rgba(0, 0, 0, 0.02);
 		transition: transform 0.4s ease;
+		margin-left: auto;
+		z-index: 2;
 	}
 
 	.hero-image-wrapper:hover {
@@ -218,11 +220,11 @@ import Button from './Button.astro';
 		transform: scale(1.05);
 	}
 
-	/* Stats Card */
+	/* Stats Card - behind the image, peeking out left */
 	.stats-card {
 		position: absolute;
 		bottom: 24px;
-		left: -280px;
+		left: -120px;
 		width: 347px;
 		background: #030726;
 		border-radius: var(--border-radius-lg);
@@ -294,28 +296,20 @@ import Button from './Button.astro';
 		}
 	}
 
-	/* Responsive Styles */
+	/* =============================================
+	   Responsive Styles
+	   ============================================= */
+
 	@media (max-width: 1400px) {
 		.hero-section {
 			padding: 160px 50px 60px;
 		}
 
 		.hero-container {
-			grid-template-columns: minmax(400px, 538px) 1fr;
-			gap: 80px;
-		}
-
-		.hero-heading {
-			font-size: 65px;
-			line-height: 60px;
-		}
-
-		.hero-visual {
-			margin-left: 60px;
+			gap: 60px;
 		}
 
 		.stats-card {
-			left: -150px;
 			width: 300px;
 			padding: 28px 24px 40px;
 		}
@@ -337,28 +331,43 @@ import Button from './Button.astro';
 		}
 
 		.hero-container {
-			grid-template-columns: minmax(350px, 480px) 1fr;
-			gap: 60px;
-		}
-
-		.hero-heading {
-			font-size: 55px;
-			line-height: 55px;
-		}
-
-		.hero-visual {
-			margin-left: 20px;
+			gap: 50px;
 		}
 
 		.hero-image-wrapper {
-			width: 420px;
-			height: 420px;
+			max-width: 420px;
 		}
 
+		/* Move stats card below the image */
 		.stats-card {
-			left: -230px;
-			width: 280px;
-			padding: 24px 20px 32px;
+			position: static;
+			width: 100%;
+			max-width: 420px;
+			margin-top: 24px;
+			padding: 24px;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+		}
+
+		.stat-item {
+			flex: 1;
+			text-align: center;
+			align-items: center;
+		}
+
+		.stat-item:hover {
+			transform: translateY(-4px);
+		}
+
+		.stat-number {
+			font-size: 24px;
+			line-height: 32px;
+		}
+
+		.stat-label {
+			font-size: 14px;
+			line-height: 18px;
 		}
 
 		.last-line-wrapper {
@@ -373,12 +382,12 @@ import Button from './Button.astro';
 
 	@media (max-width: 1024px) {
 		.hero-section {
-			padding: 140px 40px 60px;
+			padding: 160px 40px 60px;
 		}
 
 		.hero-container {
 			grid-template-columns: 1fr;
-			gap: 60px;
+			gap: 50px;
 			justify-items: center;
 		}
 
@@ -390,9 +399,8 @@ import Button from './Button.astro';
 			align-items: center;
 		}
 
-		.hero-heading {
-			font-size: 50px;
-			line-height: 55px;
+		.heading-break {
+			display: none;
 		}
 
 		.last-line-wrapper {
@@ -407,15 +415,13 @@ import Button from './Button.astro';
 		}
 
 		.hero-visual {
-			max-width: 100%;
-			margin-left: 0;
+			width: 100%;
+			max-width: 496px;
 		}
 
 		.hero-image-wrapper {
-			width: 100%;
-			max-width: 496px;
-			height: auto;
-			aspect-ratio: 1;
+			max-width: 100%;
+			margin-left: 0;
 		}
 
 		.hero-image-wrapper::before {
@@ -424,41 +430,28 @@ import Button from './Button.astro';
 		}
 
 		.stats-card {
-			position: static;
-			width: 100%;
-			max-width: 347px;
-			margin: 20px auto 0;
-			padding: 28px;
+			max-width: 100%;
 		}
 
 		.stat-number {
-			font-size: 28px;
-			line-height: 36px;
+			font-size: 26px;
+			line-height: 34px;
 		}
 
 		.stat-label {
-			font-size: 17px;
-			line-height: 22px;
+			font-size: 15px;
+			line-height: 20px;
 		}
 	}
 
 	@media (max-width: 768px) {
 		.hero-section {
-			padding: 140px 24px 40px;
+			padding: 150px 24px 40px;
 			min-height: auto;
 		}
 
 		.hero-container {
 			gap: 40px;
-		}
-
-		.hero-heading {
-			font-size: 40px;
-			line-height: 45px;
-		}
-
-		.last-line-wrapper {
-			margin-bottom: 0;
 		}
 
 		.hero-description {
@@ -471,40 +464,23 @@ import Button from './Button.astro';
 			margin-top: 20px;
 		}
 
+		.last-line-wrapper {
+			margin-bottom: 0;
+		}
+
 		.hero-image-wrapper {
 			padding: 6px;
-			max-width: 400px;
 		}
 
 		.hero-image-wrapper::before {
-			top: 1rem;
-			left: 1rem;
+			top: 0.75rem;
+			left: 0.75rem;
 		}
 
 		.stats-card {
-			padding: 24px;
-			max-width: none;
-			width: calc(100% + 48px);
-			margin-left: -24px;
-			gap: 16px;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: space-between;
-		}
-
-		.hero-image-wrapper::before {
-			display: none;
-		}
-
-		.stat-item {
-			flex: 1;
-			text-align: center;
-			align-items: center;
-			padding: 10px 6px;
-		}
-
-		.stat-item:hover {
-			transform: translateY(-4px);
+			padding: 20px;
+			gap: 12px;
+			margin-top: 20px;
 		}
 
 		.stat-number {
@@ -515,7 +491,6 @@ import Button from './Button.astro';
 		.stat-label {
 			font-size: 11px;
 			line-height: 15px;
-			word-wrap: break-word;
 		}
 	}
 
@@ -530,11 +505,6 @@ import Button from './Button.astro';
 
 		.hero-content {
 			max-width: 100%;
-		}
-
-		.hero-heading {
-			font-size: 32px;
-			line-height: 38px;
 		}
 
 		.last-line-wrapper {
@@ -558,22 +528,19 @@ import Button from './Button.astro';
 		}
 
 		.hero-image-wrapper {
-			max-width: 100%;
 			padding: 4px;
 		}
 
 		.hero-image-wrapper::before {
-			top: 0.75rem;
-			left: 0.75rem;
+			top: 0.5rem;
+			left: 0.5rem;
 		}
 
 		.stats-card {
 			padding: 16px 12px;
 			border-radius: 16px;
 			gap: 8px;
-			flex-wrap: nowrap;
-			width: calc(100% + 32px);
-			margin-left: -16px;
+			margin-top: 16px;
 		}
 
 		.stat-item {
