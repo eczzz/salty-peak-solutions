@@ -88,10 +88,8 @@ const quickLinks = [
 				</form>
 
 				<div class="social-icons">
-					<a href="#" class="social-icon" aria-label="Twitter">
-						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M17 2.00001C16.37 2.62501 15.62 3.12501 14.79 3.50001C14.37 2.97176 13.8 2.58637 13.1558 2.39831C12.5115 2.21026 11.8276 2.22852 11.1943 2.45035C10.5609 2.67218 10.0086 3.08628 9.61311 3.63708C9.21762 4.18787 9.00001 4.84576 9 5.52001V6.27001C7.68 6.30501 6.37 6.00501 5.19 5.40001C4.01 4.79501 3 3.90501 2.25 2.81251C2.25 2.81251 -0.75 9.81251 6.25 12.8125C4.64 13.9375 2.69 14.5 0.75 14.4375C7.75 18.1875 16.25 14.4375 16.25 5.50001C16.2494 5.29699 16.2294 5.09451 16.19 4.89501C16.88 4.15001 17.37 3.22501 17 2.00001Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
+					<a href="#" class="social-icon" aria-label="X">
+						<img src="/x-icon.svg" alt="X" width="14" height="14" />
 					</a>
 					<a href="#" class="social-icon" aria-label="Facebook">
 						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -513,75 +511,93 @@ const quickLinks = [
 		.footer-container {
 			padding: 36px 24px;
 			border-radius: 24px;
-			background: linear-gradient(to bottom, #030726 83%, #CC5700 83%);
+			background: linear-gradient(to bottom, #030726 85%, #CC5700 85%);
 		}
 
 		.footer-content {
 			grid-template-columns: 1fr;
-			gap: 32px;
+			gap: 0;
+			text-align: center;
 		}
 
-		.footer-left,
-		.footer-center,
-		.footer-right {
-			text-align: left;
+		/* Logo + tagline section */
+		.footer-left {
+			align-items: center;
 			padding-top: 0;
+			padding-bottom: 24px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 		}
 
 		.footer-logo {
-			margin-bottom: 20px;
+			margin-bottom: 12px;
 		}
 
 		.footer-logo img {
-			width: 120px;
+			width: 110px;
 		}
 
 		.footer-tagline {
-			font-size: 15px;
-			line-height: 22px;
+			font-size: 14px;
+			line-height: 20px;
 			margin-bottom: 20px;
+			max-width: 300px;
 		}
 
 		.contact-info-list {
-			gap: 14px;
+			display: none;
 		}
 
-		.contact-item {
-			font-size: 14px;
-			line-height: 18px;
+		/* Quick links as horizontal row */
+		.footer-center {
+			padding: 20px 0;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 		}
 
 		.footer-section-heading {
-			font-size: 14px;
-			margin-bottom: 18px;
+			font-size: 11px;
+			margin-bottom: 14px;
+			letter-spacing: 0.5px;
+			color: rgba(255, 255, 255, 0.5);
 		}
 
 		.footer-nav {
-			gap: 16px;
+			flex-direction: row;
+			justify-content: center;
+			gap: 24px;
 		}
 
 		.footer-nav-link {
-			font-size: 14px;
+			font-size: 13px;
+		}
+
+		/* Newsletter compact */
+		.footer-right {
+			padding: 20px 0 0;
+			align-items: center;
 		}
 
 		.newsletter-heading {
-			font-size: 16px;
-			line-height: 20px;
-			margin-bottom: 20px;
+			font-size: 14px;
+			line-height: 18px;
+			margin-bottom: 16px;
 		}
 
 		.newsletter-form {
-			margin-bottom: 28px;
+			margin-bottom: 20px;
+			width: 100%;
+			max-width: 280px;
 		}
 
 		.newsletter-input {
-			font-size: 14px;
+			font-size: 13px;
 			height: 36px;
+			text-align: center;
+			padding: 10px 45px 10px 0;
 		}
 
 		.social-icons {
-			justify-content: flex-start;
-			gap: 14px;
+			justify-content: center;
+			gap: 16px;
 		}
 
 		.social-icon {
@@ -595,12 +611,16 @@ const quickLinks = [
 		}
 
 		.footer-divider {
-			margin-bottom: 24px;
+			display: none;
+		}
+
+		.social-icons {
+			margin-bottom: -8px;
 		}
 
 		.footer-copyright {
-			font-size: 13px;
-			line-height: 20px;
+			font-size: 12px;
+			line-height: 18px;
 		}
 	}
 
@@ -612,96 +632,29 @@ const quickLinks = [
 		.footer-container {
 			padding: 28px 16px;
 			border-radius: 16px;
-			background: linear-gradient(to bottom, #030726 86%, #CC5700 86%);
+			background: linear-gradient(to bottom, #030726 87%, #CC5700 87%);
 		}
 
-		.footer-content {
-			gap: 28px;
-		}
-
-		.footer-logo {
-			margin-bottom: 16px;
+		.contact-info-list {
+			grid-template-columns: 1fr;
+			gap: 8px;
 		}
 
 		.footer-logo img {
-			width: 100px;
+			width: 90px;
 		}
 
 		.footer-tagline {
 			font-size: 13px;
-			line-height: 19px;
-			margin-bottom: 16px;
-		}
-
-		.contact-info-list {
-			gap: 12px;
-		}
-
-		.contact-item {
-			font-size: 13px;
-			line-height: 16px;
-			gap: 10px;
-		}
-
-		.contact-item svg {
-			width: 14px;
-			height: 14px;
-		}
-
-		.footer-section-heading {
-			font-size: 13px;
-			margin-bottom: 14px;
+			line-height: 18px;
 		}
 
 		.footer-nav {
-			gap: 14px;
+			gap: 16px;
 		}
 
 		.footer-nav-link {
-			font-size: 13px;
-		}
-
-		.newsletter-heading {
-			font-size: 14px;
-			line-height: 18px;
-			margin-bottom: 16px;
-		}
-
-		.newsletter-form {
-			margin-bottom: 24px;
-		}
-
-		.newsletter-input {
-			font-size: 13px;
-			height: 34px;
-			padding: 10px 45px 10px 0;
-		}
-
-		.newsletter-submit {
-			padding: 4px;
-		}
-
-		.newsletter-submit svg {
-			width: 18px;
-			height: 18px;
-		}
-
-		.social-icons {
-			gap: 12px;
-		}
-
-		.social-icon {
-			width: 32px;
-			height: 32px;
-		}
-
-		.social-icon svg {
-			width: 14px;
-			height: 14px;
-		}
-
-		.footer-divider {
-			margin-bottom: 20px;
+			font-size: 12px;
 		}
 
 		.footer-copyright {

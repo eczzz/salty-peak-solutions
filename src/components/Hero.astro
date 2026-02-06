@@ -63,7 +63,7 @@ import Button from './Button.astro';
 <style>
 	/* Hero Section */
 	.hero-section {
-		min-height: 100vh;
+		height: 900px;
 		background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-dark) 100%);
 		padding: 184px 60px 60px;
 		display: flex;
@@ -173,7 +173,7 @@ import Button from './Button.astro';
 	.hero-image-wrapper {
 		position: relative;
 		width: 100%;
-		max-width: 496px;
+		max-width: clamp(340px, 30vw, 496px);
 		aspect-ratio: 1;
 		background: var(--bg-dark);
 		border-radius: var(--border-radius-lg);
@@ -224,8 +224,8 @@ import Button from './Button.astro';
 	.stats-card {
 		position: absolute;
 		bottom: 24px;
-		left: -120px;
-		width: 347px;
+		left: -9%;
+		width: 70%;
 		background: #030726;
 		border-radius: var(--border-radius-lg);
 		padding: 32px 32px 48px 32px;
@@ -308,21 +308,6 @@ import Button from './Button.astro';
 		.hero-container {
 			gap: 60px;
 		}
-
-		.stats-card {
-			width: 300px;
-			padding: 28px 24px 40px;
-		}
-
-		.stat-number {
-			font-size: 26px;
-			line-height: 34px;
-		}
-
-		.stat-label {
-			font-size: 16px;
-			line-height: 20px;
-		}
 	}
 
 	@media (max-width: 1200px) {
@@ -332,32 +317,6 @@ import Button from './Button.astro';
 
 		.hero-container {
 			gap: 50px;
-		}
-
-		.hero-image-wrapper {
-			max-width: 420px;
-		}
-
-		/* Move stats card below the image */
-		.stats-card {
-			position: static;
-			width: 100%;
-			max-width: 420px;
-			margin-top: 24px;
-			padding: 24px;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: space-between;
-		}
-
-		.stat-item {
-			flex: 1;
-			text-align: center;
-			align-items: center;
-		}
-
-		.stat-item:hover {
-			transform: translateY(-4px);
 		}
 
 		.stat-number {
@@ -382,6 +341,7 @@ import Button from './Button.astro';
 
 	@media (max-width: 1024px) {
 		.hero-section {
+			height: auto;
 			padding: 160px 40px 60px;
 		}
 
@@ -429,8 +389,27 @@ import Button from './Button.astro';
 			left: 1.5rem;
 		}
 
+		/* Move stats card below the image on stacked layout */
 		.stats-card {
+			position: static;
+			left: auto;
+			width: 100%;
 			max-width: 100%;
+			margin-top: 24px;
+			padding: 24px;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+		}
+
+		.stat-item {
+			flex: 1;
+			text-align: center;
+			align-items: center;
+		}
+
+		.stat-item:hover {
+			transform: translateY(-4px);
 		}
 
 		.stat-number {
@@ -480,7 +459,8 @@ import Button from './Button.astro';
 		.stats-card {
 			padding: 20px;
 			gap: 12px;
-			margin-top: 20px;
+			margin-top: 44px;
+			margin-bottom: -24px;
 		}
 
 		.stat-number {
@@ -540,7 +520,8 @@ import Button from './Button.astro';
 			padding: 16px 12px;
 			border-radius: 16px;
 			gap: 8px;
-			margin-top: 16px;
+			margin-top: 40px;
+			margin-bottom: -28px;
 		}
 
 		.stat-item {
