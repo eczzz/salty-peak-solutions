@@ -1,0 +1,630 @@
+<section class="coverage-section" data-animate-section>
+	<div class="coverage-folder">
+		<img src="/file-folder-background.svg" alt="" class="folder-bg" aria-hidden="true" />
+
+		<!-- Pill in the tab area -->
+		<div class="coverage-tab">
+			<div class="coverage-pill animate-on-scroll" data-delay="0">OUR COVERAGE AREA</div>
+		</div>
+
+		<!-- Heading positioned at the curve -->
+		<h2 class="coverage-main-heading animate-on-scroll" data-delay="100">Serving the Western United States</h2>
+
+		<!-- Main content in the folder body -->
+		<div class="coverage-folder-content">
+			<!-- Two Column Layout -->
+			<div class="coverage-grid">
+				<!-- Left Column - Map -->
+				<div class="coverage-map animate-on-scroll" data-delay="200">
+					<div class="map-container">
+						<iframe
+							src="https://www.google.com/maps/d/embed?mid=1cDG4lX2nwhZDwNWG1tShVoF_Sj--G8E&ll=38.969547360074394,-112.15645128743404&z=5"
+							class="map-iframe"
+							title="Salty Peak Solutions Coverage Area"
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+						></iframe>
+					</div>
+				</div>
+
+				<!-- Right Column - Content -->
+				<div class="coverage-content animate-on-scroll" data-delay="300">
+					<p class="coverage-description">
+						As the authorized MagneGrip distributor, we provide complete sales, installation, and support services throughout our 11-state territory.
+					</p>
+
+					<div class="states-grid">
+						<div class="state-item">ALASKA</div>
+						<div class="state-item">CALIFORNIA</div>
+						<div class="state-item">WYOMING</div>
+						<hr class="state-divider" />
+						<div class="state-item">HAWAII</div>
+						<div class="state-item">NEVADA</div>
+						<div class="state-item">MONTANA</div>
+						<hr class="state-divider" />
+						<div class="state-item">WASHINGTON</div>
+						<div class="state-item">UTAH</div>
+						<div class="state-item">COLORADO</div>
+						<hr class="state-divider" />
+						<div class="state-item">OREGON</div>
+						<div class="state-item">IDAHO</div>
+						<a href="#contact" class="coverage-contact-btn">Contact Us</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	/* Coverage Area Section */
+	.coverage-section {
+		background: var(--bg-dark);
+		padding: 100px 60px;
+		position: relative;
+	}
+
+	/* Scroll Animation Styles */
+	.animate-on-scroll {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+	}
+
+	.animate-on-scroll.animated {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.coverage-folder {
+		max-width: 1479px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.folder-bg {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	/* Tab area - pill positioned in the folder tab */
+	.coverage-tab {
+		position: absolute;
+		top: calc(10% + 2rem);
+		left: calc(6% + 3rem);
+	}
+
+	/* Heading positioned at the curve/transition area */
+	.coverage-main-heading {
+		position: absolute;
+		top: calc(12% - 2rem);
+		left: 36%;
+		font-family: 'Quicksand', sans-serif;
+		font-size: 46px;
+		font-weight: 400;
+		line-height: 70px;
+		color: var(--text-white);
+		margin: 0;
+		white-space: nowrap;
+		transition: all 0.3s ease;
+		cursor: default;
+	}
+
+	.coverage-main-heading:hover {
+		color: var(--primary-gold);
+		text-shadow: 0 0 30px rgba(244, 185, 75, 0.4);
+	}
+
+	/* Main content positioned in the folder body */
+	.coverage-folder-content {
+		position: absolute;
+		top: 22%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 40px 80px 60px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	/* Section Header - removed since pill is in tab now */
+	.coverage-header {
+		display: none;
+	}
+
+	.coverage-pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		white-space: nowrap;
+		height: 40px;
+		border: 1px solid var(--primary-gold);
+		border-radius: 24px;
+		font-family: 'Quicksand', sans-serif;
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--text-white);
+		padding: 11px 33px;
+		transition: all 0.3s ease;
+		cursor: default;
+	}
+
+	.coverage-pill:hover {
+		background: rgba(244, 185, 75, 0.1);
+		border-color: var(--primary-orange);
+		transform: scale(1.05);
+		box-shadow: 0 0 20px rgba(244, 185, 75, 0.3);
+	}
+
+	/* Two Column Grid */
+	.coverage-grid {
+		display: flex;
+		gap: 50px;
+		align-items: flex-start;
+	}
+
+	/* Left Column - Map */
+	.coverage-map {
+		flex: 0 0 500px;
+	}
+
+	.map-container {
+		width: 100%;
+		height: 360px;
+		background: #FFFFFF;
+		border-radius: 20px;
+		overflow: hidden;
+		transition: all 0.4s ease;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	}
+
+	.map-container:hover {
+		transform: translateY(-8px) scale(1.02);
+		box-shadow: 0 12px 40px rgba(232, 131, 58, 0.2);
+	}
+
+	.map-image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	.map-iframe {
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+
+	/* Right Column - Content */
+	.coverage-content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-left: 7rem;
+		height: 360px;
+	}
+
+	.coverage-heading {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 46px;
+		font-weight: 400;
+		line-height: 70px;
+		color: var(--text-white);
+		margin: 0 0 40px 0;
+	}
+
+	.coverage-description {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		color: #D8D8D8;
+		max-width: 514px;
+		margin: 0 0 20px 0;
+		padding: 12px;
+		border-radius: 8px;
+		transition: all 0.3s ease;
+		cursor: default;
+	}
+
+	.coverage-description:hover {
+		background: rgba(255, 255, 255, 0.03);
+		color: #FFFFFF;
+	}
+
+	.coverage-divider {
+		border: none;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+		margin: 0 0 20px 0;
+		max-width: 400px;
+	}
+
+	/* States Grid */
+	.states-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 16px 20px;
+		max-width: 600px;
+	}
+
+	.state-divider {
+		border: none;
+		border-top: 1px solid #A01512;
+		margin: 4px 0;
+		grid-column: span 3;
+	}
+
+	.state-item {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 26px;
+		color: var(--text-white);
+		transition: all 0.3s ease;
+		cursor: default;
+	}
+
+	.state-item:hover {
+		color: var(--primary-orange);
+		transform: translateX(4px);
+		text-shadow: 0 0 15px rgba(232, 131, 58, 0.5);
+	}
+
+	.coverage-contact-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 186px;
+		height: 47px;
+		background: var(--primary-orange);
+		border-radius: 24px;
+		font-family: 'Helvetica', 'Arial', sans-serif;
+		font-size: 14px;
+		font-weight: 700;
+		color: var(--text-white);
+		text-decoration: none;
+		padding: 11px 38px;
+		transition: all 0.3s ease;
+		align-self: flex-start;
+		box-shadow: 0 4px 15px rgba(232, 131, 58, 0.3);
+		white-space: nowrap;
+	}
+
+	.coverage-contact-btn:hover {
+		background: var(--primary-gold, #F4B94B);
+		transform: scale(1.05);
+		box-shadow: 0 0 25px rgba(244, 185, 75, 0.5);
+	}
+
+	/* Coverage Area Responsive Styles */
+	@media (max-width: 1400px) {
+		.coverage-section {
+			padding: 80px 40px;
+		}
+
+		.coverage-main-heading {
+			font-size: 40px;
+			line-height: 55px;
+			left: 38%;
+		}
+
+		.coverage-folder-content {
+			padding: 30px 60px 50px;
+		}
+
+		.coverage-map {
+			flex: 0 0 420px;
+		}
+
+		.map-container {
+			height: 320px;
+		}
+
+		.coverage-content {
+			height: 320px;
+			margin-left: 4rem;
+		}
+
+		.state-item {
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		.states-grid {
+			gap: 14px 16px;
+		}
+	}
+
+	/* Tablet layout - switch to card-based layout at 1200px */
+	@media (max-width: 1200px) {
+		.coverage-section {
+			padding: 60px 40px;
+		}
+
+		.coverage-folder {
+			background: #030726;
+			border-radius: 24px;
+			padding: 48px 40px;
+		}
+
+		/* Hide the SVG background on tablet */
+		.folder-bg {
+			display: none;
+		}
+
+		/* Reset all absolute positioning for tablet */
+		.coverage-tab {
+			position: static;
+			margin-bottom: 20px;
+		}
+
+		.coverage-pill {
+			font-size: 13px;
+			padding: 10px 28px;
+			height: auto;
+		}
+
+		.coverage-main-heading {
+			position: static;
+			font-size: 36px;
+			line-height: 44px;
+			white-space: normal;
+			margin-bottom: 40px;
+		}
+
+		.coverage-folder-content {
+			position: static;
+			padding: 0;
+		}
+
+		/* Keep side-by-side layout on larger tablets */
+		.coverage-grid {
+			gap: 40px;
+		}
+
+		.coverage-map {
+			flex: 0 0 45%;
+		}
+
+		.map-container {
+			height: 300px;
+			border-radius: 16px;
+		}
+
+		.coverage-content {
+			flex: 1;
+			height: auto;
+			margin-left: 0;
+		}
+
+		.coverage-description {
+			font-size: 15px;
+			line-height: 22px;
+			max-width: 100%;
+			padding: 0;
+			margin-bottom: 24px;
+		}
+
+		.states-grid {
+			gap: 14px 20px;
+			max-width: 100%;
+		}
+
+		.state-item {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		.state-divider {
+			margin: 4px 0;
+		}
+
+		.coverage-contact-btn {
+			width: auto;
+			height: 44px;
+			font-size: 14px;
+			padding: 11px 32px;
+			border-radius: 24px;
+		}
+	}
+
+	/* Smaller tablet - stack vertically */
+	@media (max-width: 850px) {
+		.coverage-section {
+			padding: 50px 32px;
+		}
+
+		.coverage-folder {
+			padding: 40px 32px;
+		}
+
+		.coverage-main-heading {
+			font-size: 32px;
+			line-height: 40px;
+			margin-bottom: 32px;
+		}
+
+		/* Stack the grid vertically */
+		.coverage-grid {
+			flex-direction: column;
+			gap: 32px;
+		}
+
+		.coverage-map {
+			flex: none;
+			width: 100%;
+		}
+
+		.map-container {
+			height: 280px;
+		}
+
+		.coverage-content {
+			width: 100%;
+		}
+
+		.states-grid {
+			gap: 14px 24px;
+		}
+
+		.state-item {
+			font-size: 17px;
+			line-height: 24px;
+		}
+
+		.coverage-contact-btn {
+			margin-top: 8px;
+		}
+	}
+
+	/* Mobile layout */
+	@media (max-width: 768px) {
+		.coverage-section {
+			padding: 50px 24px;
+		}
+
+		.coverage-folder {
+			padding: 36px 24px;
+			border-radius: 20px;
+		}
+
+		.coverage-tab {
+			margin-bottom: 16px;
+		}
+
+		.coverage-pill {
+			font-size: 12px;
+			padding: 10px 24px;
+		}
+
+		.coverage-main-heading {
+			font-size: 28px;
+			line-height: 36px;
+			margin-bottom: 28px;
+		}
+
+		.coverage-grid {
+			gap: 28px;
+		}
+
+		.map-container {
+			height: 250px;
+		}
+
+		.coverage-description {
+			font-size: 15px;
+			line-height: 22px;
+			margin-bottom: 20px;
+		}
+
+		.states-grid {
+			gap: 12px 20px;
+		}
+
+		.state-item {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		.state-divider {
+			margin: 4px 0;
+		}
+
+		.coverage-contact-btn {
+			height: 46px;
+			font-size: 14px;
+			padding: 12px 32px;
+			margin-top: 4px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.coverage-section {
+			padding: 40px 16px;
+		}
+
+		.coverage-folder {
+			padding: 32px 20px;
+			border-radius: 16px;
+		}
+
+		.coverage-pill {
+			font-size: 11px;
+			padding: 8px 20px;
+		}
+
+		.coverage-main-heading {
+			font-size: 24px;
+			line-height: 32px;
+			margin-bottom: 24px;
+		}
+
+		.coverage-grid {
+			gap: 24px;
+		}
+
+		.map-container {
+			height: 200px;
+			border-radius: 12px;
+		}
+
+		.coverage-description {
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		/* 2-column grid on mobile, hide dividers for clean balanced layout */
+		.states-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 14px 20px;
+		}
+
+		.state-divider {
+			display: none;
+		}
+
+		.state-item {
+			font-size: 15px;
+			line-height: 22px;
+		}
+
+		.coverage-contact-btn {
+			height: 46px;
+			font-size: 14px;
+			grid-column: span 2;
+			justify-self: start;
+			margin-top: 12px;
+		}
+	}
+</style>
+
+<script>
+	// Scroll animation with Intersection Observer
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: '0px 0px -50px 0px'
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				const element = entry.target;
+				const delay = element.getAttribute('data-delay') || '0';
+
+				setTimeout(() => {
+					element.classList.add('animated');
+				}, parseInt(delay));
+
+				observer.unobserve(element);
+			}
+		});
+	}, observerOptions);
+
+	// Observe all elements with animate-on-scroll class
+	document.addEventListener('DOMContentLoaded', () => {
+		const animatedElements = document.querySelectorAll('.animate-on-scroll');
+		animatedElements.forEach(element => observer.observe(element));
+	});
+</script>

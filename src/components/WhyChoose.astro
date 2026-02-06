@@ -1,0 +1,767 @@
+<section class="why-choose-section">
+	<div class="why-choose-container">
+		<!-- Left Column - Content -->
+		<div class="why-choose-content">
+			<div class="why-choose-pill animate-on-scroll" data-delay="0">THE DIFFERENCE</div>
+
+			<h2 class="why-choose-heading animate-on-scroll" data-delay="100">Why Choose Salty Peak Solutions?</h2>
+
+			<!-- Mission Card -->
+			<div class="mission-card animate-on-scroll" data-delay="200">
+				<svg class="mission-card-bg" width="459" height="177" viewBox="0 0 459 177" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M390.364 26C390.364 37.0457 399.319 46 410.364 46H439C450.046 46 459 54.9543 459 66V152C459 165.807 447.807 177 434 177H25C11.1929 177 0 165.807 0 152V25C0 11.1929 11.1929 4.26821e-07 25 0H370.364C381.41 0 390.364 8.95431 390.364 20V26Z" fill="#030726"/>
+				</svg>
+
+				<p class="mission-text">
+					"Our mission is protecting the health of first responders through proven clean air technology that eliminates 100% of cancer-causing diesel exhaust."
+				</p>
+
+				<div class="profile-avatars">
+					<img src="/fake-people.jpg" alt="Team member" class="avatar" />
+					<img src="/fake-people.jpg" alt="Team member" class="avatar" />
+					<img src="/fake-people.jpg" alt="Team member" class="avatar" />
+				</div>
+
+				<a href="#mission" class="mission-arrow-btn" aria-label="Learn more about our mission">
+					<svg width="22" height="22" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M4 12L12 4M12 4H6M12 4V10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+			</div>
+
+			<!-- Features List -->
+			<div class="features-list">
+				<a href="#authorized-distributor" class="feature-item animate-on-scroll" data-delay="300">
+					<span class="feature-text">Authorized Distributor</span>
+					<div class="feature-arrow-circle">
+						<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="14.5" cy="14.5" r="14" stroke="white"/>
+						</svg>
+						<svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+				</a>
+
+				<a href="#western-expertise" class="feature-item animate-on-scroll" data-delay="400">
+					<span class="feature-text">Western Regional Expertise</span>
+					<div class="feature-arrow-circle">
+						<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="14.5" cy="14.5" r="14" stroke="white"/>
+						</svg>
+						<svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+				</a>
+
+				<a href="#full-service" class="feature-item animate-on-scroll" data-delay="500">
+					<span class="feature-text">Full-Service Support</span>
+					<div class="feature-arrow-circle">
+						<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="14.5" cy="14.5" r="14" stroke="white"/>
+						</svg>
+						<svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<!-- Right Column - Image -->
+		<div class="why-choose-visual animate-on-scroll" data-delay="200">
+			<div class="why-choose-image-wrapper">
+				<img
+					src="/why-choose-us-image-container.svg"
+					alt="Firefighters with fire truck"
+					class="why-choose-image"
+				/>
+				<a href="#about" class="learn-more-btn">Learn More About Us</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	/* ========================================
+	   Why Choose Section
+	   ======================================== */
+	.why-choose-section {
+		background: var(--bg-dark);
+		padding: 100px 60px;
+		overflow-x: hidden;
+	}
+
+	.why-choose-section * {
+		box-sizing: border-box;
+	}
+
+	/* Scroll Animation Styles */
+	.animate-on-scroll {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+	}
+
+	.animate-on-scroll.animated {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.why-choose-container {
+		max-width: 1295px;
+		width: 100%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: minmax(0, 580px) minmax(0, 583px);
+		gap: 130px;
+		align-items: stretch;
+		overflow: hidden;
+	}
+
+	/* Left Column - Content */
+	.why-choose-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.why-choose-pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 179px;
+		height: 40px;
+		border: 1px solid #F4B94B;
+		border-radius: 24px;
+		padding: 11px 33px;
+		font-family: 'Quicksand', sans-serif;
+		font-size: 14px;
+		font-weight: 500;
+		color: #FFFFFF;
+		margin-bottom: 40px;
+		white-space: nowrap;
+		transition: all 0.3s ease;
+		cursor: default;
+	}
+
+	.why-choose-pill:hover {
+		background: rgba(244, 185, 75, 0.1);
+		border-color: var(--primary-orange);
+		transform: scale(1.05);
+		box-shadow: 0 0 20px rgba(244, 185, 75, 0.3);
+	}
+
+	.why-choose-heading {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 46px;
+		font-weight: 400;
+		line-height: 70px;
+		color: #FFFFFF;
+		max-width: 631px;
+		margin: 0 0 40px 0;
+		transition: all 0.3s ease;
+		cursor: default;
+	}
+
+	.why-choose-heading:hover {
+		color: var(--primary-gold);
+		text-shadow: 0 0 30px rgba(244, 185, 75, 0.4);
+	}
+
+	/* Mission Card */
+	.mission-card {
+		width: 459px;
+		height: 177px;
+		padding: 21px 20px;
+		position: relative;
+		margin-bottom: 35px;
+		transition: transform 0.4s ease;
+	}
+
+	.mission-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.mission-card-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		transition: all 0.4s ease;
+	}
+
+	.mission-card:hover .mission-card-bg path {
+		filter: drop-shadow(0 8px 25px rgba(232, 131, 58, 0.3));
+	}
+
+	.mission-text {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		color: #D8D8D8;
+		max-width: 339px;
+		margin: 0 0 8px 0;
+		position: relative;
+		z-index: 1;
+		transition: color 0.3s ease;
+	}
+
+	.mission-card:hover .mission-text {
+		color: #FFFFFF;
+	}
+
+	.profile-avatars {
+		display: flex;
+		margin-top: 8px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.avatar {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		border: 2px solid #030726;
+		object-fit: cover;
+		margin-left: -8px;
+		transition: all 0.3s ease;
+	}
+
+	.avatar:first-child {
+		background: #0A0A0A;
+		margin-left: 0;
+	}
+
+	.mission-card:hover .avatar {
+		transform: scale(1.1);
+		border-color: var(--primary-orange);
+	}
+
+	.mission-card:hover .avatar:nth-child(1) { transition-delay: 0ms; }
+	.mission-card:hover .avatar:nth-child(2) { transition-delay: 50ms; }
+	.mission-card:hover .avatar:nth-child(3) { transition-delay: 100ms; }
+
+	.mission-arrow-btn {
+		position: absolute;
+		top: 4px;
+		right: 4px;
+		width: 60px;
+		height: 39px;
+		background: #CC5700;
+		border: 1px solid #CC5700;
+		border-radius: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		z-index: 2;
+	}
+
+	.mission-arrow-btn:hover {
+		transform: scale(1.15) rotate(45deg);
+		background: var(--primary-gold);
+		border-color: var(--primary-gold);
+		box-shadow: 0 0 20px rgba(244, 185, 75, 0.5);
+	}
+
+	.mission-arrow-btn svg {
+		transform: rotate(0deg);
+		transition: transform 0.3s ease;
+	}
+
+	.mission-arrow-btn:hover svg {
+		transform: rotate(-45deg);
+	}
+
+	/* Features List */
+	.features-list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.feature-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #A01512;
+		padding-top: 22px;
+		padding-bottom: 22px;
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+
+	.feature-item:first-child {
+		border-top: 1px solid #A01512;
+	}
+
+	.feature-item:hover {
+		padding-left: 10px;
+		border-color: var(--primary-orange);
+	}
+
+	.feature-text {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 22px;
+		color: #D8D8D8;
+		transition: all 0.3s ease;
+	}
+
+	.feature-item:hover .feature-text {
+		color: var(--primary-gold);
+		text-shadow: 0 0 15px rgba(244, 185, 75, 0.3);
+	}
+
+	.feature-arrow-circle {
+		width: 29px;
+		height: 29px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		transition: all 0.3s ease;
+	}
+
+	.feature-arrow-circle > svg:first-child {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all 0.3s ease;
+	}
+
+	.feature-arrow-circle .arrow-icon {
+		color: #D8D8D8;
+		transform: rotate(0deg);
+		position: relative;
+		z-index: 1;
+		transition: all 0.3s ease;
+	}
+
+	.feature-item:hover .feature-arrow-circle {
+		transform: scale(1.15) rotate(45deg);
+	}
+
+	.feature-item:hover .feature-arrow-circle > svg:first-child circle {
+		fill: var(--primary-gold);
+		stroke: var(--primary-gold);
+		filter: drop-shadow(0 0 10px rgba(244, 185, 75, 0.5));
+	}
+
+	.feature-item:hover .feature-arrow-circle .arrow-icon {
+		color: #030726;
+		transform: rotate(-45deg);
+	}
+
+	/* Right Column - Image */
+	.why-choose-visual {
+		position: relative;
+		max-width: 100%;
+		overflow: hidden;
+	}
+
+	.why-choose-image-wrapper {
+		position: relative;
+		width: 100%;
+		max-width: 583px;
+		height: 100%;
+		min-height: calc(100% + 80px);
+		margin-top: calc(-3rem + 8px);
+		transition: transform 0.4s ease;
+		overflow: hidden;
+		border-radius: 24px;
+	}
+
+	.why-choose-image-wrapper:hover {
+		transform: translateY(-8px);
+	}
+
+	.why-choose-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.6s ease, filter 0.4s ease;
+	}
+
+	.why-choose-image-wrapper:hover .why-choose-image {
+		transform: scale(1.05);
+	}
+
+	.learn-more-btn {
+		position: absolute;
+		bottom: 44px;
+		right: 15px;
+		width: 210px;
+		height: 47px;
+		background: #CC5700;
+		border-radius: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 11px 30px;
+		font-family: 'Helvetica', 'Arial', sans-serif;
+		font-size: 14px;
+		font-weight: 700;
+		color: #FFFFFF;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		white-space: nowrap;
+		box-shadow: 0 4px 15px rgba(232, 131, 58, 0.3);
+	}
+
+	.learn-more-btn:hover {
+		transform: scale(1.05);
+		background: var(--primary-gold);
+		box-shadow: 0 8px 25px rgba(244, 185, 75, 0.4);
+	}
+
+	/* Why Choose Section Responsive */
+	@media (max-width: 1400px) {
+		.why-choose-section {
+			padding: 80px 40px;
+		}
+
+		.why-choose-container {
+			grid-template-columns: minmax(auto, 500px) minmax(auto, 500px);
+			gap: 80px;
+			width: 100%;
+		}
+
+		.mission-card {
+			width: 100%;
+			max-width: 459px;
+		}
+
+		.why-choose-image-wrapper {
+			width: 100%;
+			max-width: 500px;
+			height: 100%;
+			min-height: calc(100% + 70px);
+			margin-top: calc(-2.5rem + 7px);
+		}
+
+		.why-choose-heading {
+			font-size: 40px;
+			line-height: 60px;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		.why-choose-container {
+			grid-template-columns: minmax(auto, 450px) minmax(auto, 450px);
+			gap: 60px;
+			width: 100%;
+		}
+
+		.why-choose-heading {
+			font-size: 36px;
+			line-height: 52px;
+			margin-bottom: 32px;
+		}
+
+		.why-choose-pill {
+			margin-bottom: 32px;
+		}
+
+		.mission-card {
+			margin-bottom: 30px;
+		}
+
+		.why-choose-image-wrapper {
+			width: 100%;
+			max-width: 450px;
+			height: 100%;
+			min-height: calc(100% + 60px);
+			margin-top: calc(-2rem + 6px);
+		}
+
+		.features-list {
+			gap: 50px;
+		}
+
+		.feature-text {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.why-choose-section {
+			padding: 60px 30px;
+		}
+
+		.why-choose-container {
+			grid-template-columns: 1fr;
+			gap: 50px;
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.why-choose-content {
+			max-width: 600px;
+			margin: 0 auto;
+			width: 100%;
+		}
+
+		.why-choose-heading {
+			font-size: 38px;
+			line-height: 50px;
+			max-width: 100%;
+		}
+
+		/* Switch to CSS-based card on tablet */
+		.mission-card {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			min-height: 177px;
+			background: #030726;
+			border-radius: 24px;
+			overflow: hidden;
+			padding-right: 80px;
+		}
+
+		.mission-card:hover {
+			box-shadow: 0 8px 25px rgba(232, 131, 58, 0.3);
+		}
+
+		.mission-card-bg {
+			display: none;
+		}
+
+		.mission-text {
+			max-width: 100%;
+		}
+
+		.why-choose-visual {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		.why-choose-image-wrapper {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			aspect-ratio: 1;
+			margin-top: 0;
+			min-height: auto;
+			padding-bottom: 70px;
+		}
+
+		.learn-more-btn {
+			bottom: 20px;
+		}
+
+		.features-list {
+			gap: 45px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.why-choose-section {
+			padding: 60px 24px;
+			overflow: hidden;
+		}
+
+		.why-choose-container {
+			gap: 40px;
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.why-choose-content {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.why-choose-visual {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.feature-item:hover {
+			padding-left: 0;
+		}
+
+		.why-choose-pill {
+			font-size: 12px;
+			padding: 10px 24px;
+			height: auto;
+			width: auto;
+			margin-bottom: 24px;
+		}
+
+		.why-choose-heading {
+			font-size: 32px;
+			line-height: 42px;
+			margin-bottom: 32px;
+		}
+
+		.mission-card {
+			min-height: auto;
+			padding: 24px 20px;
+			padding-right: 80px;
+			margin-bottom: 32px;
+		}
+
+		.mission-text {
+			font-size: 15px;
+			line-height: 22px;
+		}
+
+		.mission-arrow-btn {
+			right: 16px;
+			top: 16px;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+		}
+
+		.features-list {
+			gap: 40px;
+		}
+
+		.feature-text {
+			font-size: 16px;
+		}
+
+		.feature-arrow-circle {
+			width: 32px;
+			height: 32px;
+		}
+
+		.why-choose-image-wrapper {
+			border-radius: 24px;
+			width: 100%;
+			max-width: 100%;
+			padding-bottom: 60px;
+			aspect-ratio: auto;
+			min-height: 350px;
+		}
+
+		.why-choose-image {
+			border-radius: 24px;
+		}
+
+		.learn-more-btn {
+			bottom: 12px;
+			right: 16px;
+			width: auto;
+			padding: 12px 28px;
+			font-size: 13px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.why-choose-section {
+			padding: 40px 20px;
+			overflow: hidden;
+		}
+
+		.why-choose-container {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.why-choose-heading {
+			font-size: 28px;
+			line-height: 36px;
+			margin-bottom: 24px;
+			word-wrap: break-word;
+		}
+
+		.mission-card {
+			padding: 20px 16px;
+			padding-right: 60px;
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.mission-text {
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		.avatar {
+			width: 35px;
+			height: 35px;
+			margin-left: -6px;
+		}
+
+		.mission-arrow-btn {
+			width: 40px;
+			height: 40px;
+			right: 10px;
+			top: 10px;
+		}
+
+		.features-list {
+			gap: 32px;
+			width: 100%;
+		}
+
+		.feature-item {
+			width: 100%;
+		}
+
+		.feature-text {
+			font-size: 15px;
+		}
+
+		.why-choose-image-wrapper {
+			border-radius: 20px;
+			width: 100%;
+			max-width: 100%;
+			min-height: 280px;
+			padding-bottom: 55px;
+		}
+
+		.why-choose-image {
+			border-radius: 20px;
+		}
+
+		.learn-more-btn {
+			bottom: 10px;
+			right: 12px;
+			padding: 10px 20px;
+			font-size: 12px;
+			height: auto;
+		}
+	}
+</style>
+
+<script>
+	// Scroll animation with Intersection Observer
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: '0px 0px -50px 0px'
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				const element = entry.target;
+				const delay = element.getAttribute('data-delay') || '0';
+
+				setTimeout(() => {
+					element.classList.add('animated');
+				}, parseInt(delay));
+
+				observer.unobserve(element);
+			}
+		});
+	}, observerOptions);
+
+	// Observe all elements with animate-on-scroll class
+	document.addEventListener('DOMContentLoaded', () => {
+		const animatedElements = document.querySelectorAll('.why-choose-section .animate-on-scroll');
+		animatedElements.forEach(element => observer.observe(element));
+	});
+</script>

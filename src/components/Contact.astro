@@ -1,0 +1,615 @@
+<section class="contact-section">
+	<div class="contact-container">
+		<div class="contact-card">
+			<!-- Left Column - Contact Info -->
+			<div class="contact-info">
+				<h2 class="contact-heading animate-on-scroll" data-delay="0">
+					Let's <span class="gradient-text">Talk.</span>
+				</h2>
+
+				<p class="contact-description animate-on-scroll" data-delay="100">
+					We're here to help you create a cleaner, safer station for your team—let's discuss your exhaust removal needs.
+				</p>
+
+				<div class="contact-details">
+					<div class="contact-phone animate-on-scroll" data-delay="200">
+						<span class="contact-label">Phone</span>
+						<a href="tel:8017926505" class="contact-link phone-link">(801) 792-6505</a>
+					</div>
+
+					<div class="contact-email animate-on-scroll" data-delay="300">
+						<span class="contact-label">Email</span>
+						<a href="mailto:curtis@saltypeakssolutions.com" class="contact-link email-link">curtis@saltypeakssolutions.com</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Right Column - Contact Form -->
+			<div class="contact-form-wrapper animate-on-scroll" data-delay="200">
+				<form action="/contact" method="POST" class="contact-form">
+					<div class="form-row">
+						<div class="form-field">
+							<label for="fullName" class="form-label">Full Name*</label>
+							<input type="text" id="fullName" name="fullName" class="form-input" required />
+						</div>
+						<div class="form-field">
+							<label for="email" class="form-label">Email Address*</label>
+							<input type="email" id="email" name="email" class="form-input" required />
+						</div>
+					</div>
+					<div class="form-field full-width">
+						<label for="subject" class="form-label">Subject*</label>
+						<input type="text" id="subject" name="subject" class="form-input" required />
+					</div>
+					<div class="form-field full-width">
+						<label for="message" class="form-label">Message*</label>
+						<textarea id="message" name="message" rows="4" class="form-input form-textarea" required></textarea>
+					</div>
+					<button type="submit" class="submit-btn" aria-label="Submit form">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6 18L18 6M18 6H9M18 6V15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	/* ========================================
+	   Contact Section
+	   ======================================== */
+	.contact-section {
+		background: var(--bg-main, #0A1563);
+		padding: 100px 60px;
+	}
+
+	/* Scroll Animation Styles */
+	.animate-on-scroll {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+	}
+
+	.animate-on-scroll.animated {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.contact-container {
+		max-width: 1420px;
+		margin: 0 auto;
+	}
+
+	.contact-card {
+		background: #030726;
+		border: 1px solid rgba(3, 7, 38, 0.12);
+		border-radius: 30px;
+		padding: 100px 80px;
+		min-height: 700px;
+		display: grid;
+		grid-template-columns: minmax(0, 457px) minmax(0, 728px);
+		gap: 80px;
+		backdrop-filter: blur(50px);
+		-webkit-backdrop-filter: blur(50px);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all 0.4s ease;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+		width: 100%;
+	}
+
+	.contact-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 15px 50px rgba(232, 131, 58, 0.15);
+		border-color: rgba(232, 131, 58, 0.2);
+	}
+
+	/* Left Column - Contact Info */
+	.contact-info {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contact-heading {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 75px;
+		font-weight: 400;
+		line-height: 65px;
+		color: #FFFFFF;
+		margin: 0 0 40px 0;
+		transition: all 0.3s ease;
+		cursor: default;
+	}
+
+	.contact-heading:hover {
+		text-shadow: 0 0 30px rgba(244, 185, 75, 0.4);
+	}
+
+	.gradient-text {
+		background: linear-gradient(90deg, #F4B94B 0%, #E8833A 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		transition: all 0.3s ease;
+	}
+
+	.contact-heading:hover .gradient-text {
+		filter: brightness(1.2);
+		text-shadow: 0 0 40px rgba(232, 131, 58, 0.6);
+	}
+
+	.contact-description {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 34px;
+		color: #FFFFFF;
+		max-width: 457px;
+		margin: 0 0 60px 0;
+		transition: all 0.3s ease;
+		cursor: default;
+	}
+
+	.contact-description:hover {
+		color: var(--primary-gold, #F4B94B);
+	}
+
+	.contact-details {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	.contact-phone,
+	.contact-email {
+		display: flex;
+		flex-direction: column;
+		transition: all 0.3s ease;
+	}
+
+	.contact-phone:hover,
+	.contact-email:hover {
+		transform: translateX(4px);
+	}
+
+	.contact-label {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 40px;
+		color: rgba(255, 255, 255, 0.5);
+		transition: all 0.3s ease;
+	}
+
+	.contact-phone:hover .contact-label,
+	.contact-email:hover .contact-label {
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	.contact-link {
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+
+	.phone-link {
+		font-family: 'Roboto', sans-serif;
+		font-size: 28px;
+		font-weight: 400;
+		line-height: 32px;
+		color: #D8D8D8;
+	}
+
+	.email-link {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 28px;
+		font-weight: 400;
+		line-height: 40px;
+		color: #FFFFFF;
+		word-break: break-word;
+	}
+
+	.contact-link:hover {
+		color: var(--primary-orange);
+		text-shadow: 0 0 15px rgba(232, 131, 58, 0.5);
+	}
+
+	/* Right Column - Contact Form */
+	.contact-form-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: 47px;
+		max-width: 728px;
+		position: relative;
+	}
+
+	.form-row {
+		display: grid;
+		grid-template-columns: minmax(200px, 341px) 1fr;
+		gap: 46px;
+	}
+
+	.form-field {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.form-field.full-width {
+		width: 100%;
+	}
+
+	.form-input {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+		color: #FFFFFF;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+		padding: 12px 0;
+		outline: none;
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+		transition: all 0.3s ease;
+	}
+
+	.form-input:hover {
+		border-bottom-color: rgba(255, 255, 255, 0.4);
+	}
+
+	.form-input:focus {
+		border-bottom-color: var(--primary-orange, #CC5700);
+		box-shadow: 0 2px 8px rgba(232, 131, 58, 0.3);
+	}
+
+	.form-textarea {
+		min-height: 134px;
+		resize: vertical;
+	}
+
+	.form-label {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+		color: rgba(255, 255, 255, 0.7);
+		transition: all 0.3s ease;
+	}
+
+	.form-field:hover .form-label {
+		color: var(--primary-gold, #F4B94B);
+	}
+
+	.submit-btn {
+		position: absolute;
+		bottom: calc(-14px - 4rem);
+		right: 0;
+		width: 56px;
+		height: 56px;
+		background: #CC5700;
+		border: 1px solid #CC5700;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 15px rgba(204, 87, 0, 0.3);
+	}
+
+	.submit-btn:hover {
+		transform: scale(1.15) rotate(45deg);
+		background: var(--primary-gold, #F4B94B);
+		border-color: var(--primary-gold, #F4B94B);
+		box-shadow: 0 0 25px rgba(244, 185, 75, 0.5);
+	}
+
+	/* Contact Section Responsive */
+	@media (max-width: 1400px) {
+		.contact-section {
+			padding: 80px 40px;
+		}
+
+		.contact-card {
+			grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
+			gap: 60px;
+			padding: 80px 60px;
+		}
+
+		.contact-heading {
+			font-size: 65px;
+			line-height: 60px;
+		}
+
+		.contact-description {
+			font-size: 22px;
+			line-height: 32px;
+		}
+
+		.form-row {
+			grid-template-columns: minmax(0, 300px) 1fr;
+			gap: 30px;
+		}
+
+		.contact-form {
+			gap: 40px;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		.contact-section {
+			padding: 70px 40px;
+		}
+
+		.contact-card {
+			grid-template-columns: minmax(0, 350px) minmax(0, 1fr);
+			gap: 50px;
+			padding: 70px 50px;
+		}
+
+		.contact-heading {
+			font-size: 55px;
+			line-height: 55px;
+		}
+
+		.contact-description {
+			font-size: 20px;
+			line-height: 30px;
+			margin-bottom: 50px;
+		}
+
+		.phone-link,
+		.email-link {
+			font-size: 24px;
+			line-height: 32px;
+		}
+
+		.form-row {
+			grid-template-columns: 1fr 1fr;
+			gap: 24px;
+		}
+
+		.contact-form {
+			gap: 35px;
+		}
+
+		.submit-btn {
+			bottom: calc(-14px - 3rem);
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.contact-section {
+			padding: 60px 40px;
+		}
+
+		.contact-card {
+			grid-template-columns: 1fr;
+			gap: 50px;
+			padding: 60px 40px;
+			min-height: auto;
+		}
+
+		.contact-card:hover {
+			transform: none;
+		}
+
+		.contact-info {
+			max-width: 100%;
+		}
+
+		.contact-heading {
+			font-size: 48px;
+			line-height: 52px;
+		}
+
+		.contact-description {
+			font-size: 18px;
+			line-height: 28px;
+			max-width: 100%;
+			margin-bottom: 40px;
+		}
+
+		.phone-link,
+		.email-link {
+			font-size: 22px;
+			line-height: 30px;
+		}
+
+		.contact-form-wrapper {
+			width: 100%;
+		}
+
+		.contact-form {
+			max-width: 100%;
+			gap: 32px;
+			padding-bottom: 80px;
+		}
+
+		.form-row {
+			grid-template-columns: 1fr 1fr;
+			gap: 24px;
+		}
+
+		.submit-btn {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.contact-section {
+			padding: 50px 24px;
+		}
+
+		.contact-card {
+			padding: 40px 24px;
+			border-radius: 20px;
+			gap: 40px;
+		}
+
+		.contact-heading {
+			font-size: 40px;
+			line-height: 46px;
+			margin-bottom: 24px;
+		}
+
+		.contact-description {
+			font-size: 16px;
+			line-height: 26px;
+			margin-bottom: 36px;
+		}
+
+		.contact-label {
+			font-size: 15px;
+			line-height: 28px;
+		}
+
+		.phone-link,
+		.email-link {
+			font-size: 18px;
+			line-height: 26px;
+		}
+
+		.contact-details {
+			gap: 20px;
+		}
+
+		.contact-form {
+			gap: 28px;
+			padding-bottom: 70px;
+		}
+
+		.form-row {
+			grid-template-columns: 1fr;
+			gap: 28px;
+		}
+
+		.form-label {
+			font-size: 14px;
+		}
+
+		.form-input {
+			font-size: 15px;
+			padding: 10px 0;
+		}
+
+		.form-textarea {
+			min-height: 100px;
+		}
+
+		.submit-btn {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.contact-section {
+			padding: 40px 16px;
+		}
+
+		.contact-card {
+			padding: 28px 16px;
+			border-radius: 16px;
+			gap: 32px;
+		}
+
+		.contact-heading {
+			font-size: 32px;
+			line-height: 38px;
+			margin-bottom: 20px;
+		}
+
+		.contact-description {
+			font-size: 14px;
+			line-height: 22px;
+			margin-bottom: 28px;
+		}
+
+		.contact-label {
+			font-size: 13px;
+			line-height: 24px;
+		}
+
+		.phone-link,
+		.email-link {
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		.contact-details {
+			gap: 16px;
+		}
+
+		.contact-form {
+			gap: 24px;
+			padding-bottom: 60px;
+		}
+
+		.form-row {
+			gap: 24px;
+		}
+
+		.form-label {
+			font-size: 13px;
+		}
+
+		.form-input {
+			font-size: 14px;
+			padding: 8px 0;
+		}
+
+		.form-textarea {
+			min-height: 80px;
+		}
+
+		.submit-btn {
+			width: 44px;
+			height: 44px;
+		}
+
+		.submit-btn svg {
+			width: 18px;
+			height: 18px;
+		}
+	}
+</style>
+
+<script>
+	// Scroll animation with Intersection Observer
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: '0px 0px -50px 0px'
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				const element = entry.target;
+				const delay = element.getAttribute('data-delay') || '0';
+
+				setTimeout(() => {
+					element.classList.add('animated');
+				}, parseInt(delay));
+
+				observer.unobserve(element);
+			}
+		});
+	}, observerOptions);
+
+	// Observe all elements with animate-on-scroll class
+	document.querySelectorAll('.contact-section .animate-on-scroll').forEach(el => {
+		observer.observe(el);
+	});
+</script>

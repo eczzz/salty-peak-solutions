@@ -1,0 +1,712 @@
+---
+// Footer component
+const currentYear = new Date().getFullYear();
+
+const quickLinks = [
+	{ name: 'ABOUT', href: '#about' },
+	{ name: 'COVERAGE', href: '#coverage' },
+	{ name: 'SOLUTIONS', href: '#solutions' },
+];
+---
+
+<footer class="footer-section">
+	<div class="footer-container">
+		<div class="footer-content">
+			<!-- Left Column - Logo & Contact Info -->
+			<div class="footer-left">
+				<div class="footer-logo">
+					<img src="/salty-peaks-orange-logo.png" alt="Salty Peaks Solutions" />
+				</div>
+
+				<p class="footer-tagline">
+					Your trusted partner for MagneGrip exhaust removal systems across the Western United States.
+				</p>
+
+				<div class="contact-info-list">
+					<a href="mailto:curtis@saltypeakssolutions.com" class="contact-item">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2.66669 2.66669H13.3334C14.0667 2.66669 14.6667 3.26669 14.6667 4.00002V12C14.6667 12.7334 14.0667 13.3334 13.3334 13.3334H2.66669C1.93335 13.3334 1.33335 12.7334 1.33335 12V4.00002C1.33335 3.26669 1.93335 2.66669 2.66669 2.66669Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M14.6667 4L8.00002 8.66667L1.33335 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<span>curtis@saltypeakssolutions.com</span>
+					</a>
+
+					<a href="tel:8017926505" class="contact-item">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6494 14.555 13.8195C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.63 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46002 12.5667C5.84926 11.5431 4.48359 10.1774 3.46002 8.56665C2.33336 6.82745 1.6322 4.84731 1.41336 2.78665C1.39671 2.60229 1.41862 2.41649 1.4777 2.24106C1.53679 2.06562 1.63175 1.90444 1.75655 1.76773C1.88134 1.63102 2.03324 1.52179 2.20256 1.44702C2.37189 1.37225 2.55493 1.33349 2.74002 1.33332H4.74002C5.06357 1.33013 5.37723 1.4447 5.62248 1.65568C5.86773 1.86665 6.02804 2.15961 6.07336 2.47998C6.15779 3.12003 6.31434 3.74847 6.54002 4.35332C6.62969 4.59193 6.64908 4.85126 6.59591 5.10057C6.54274 5.34988 6.41928 5.57873 6.24002 5.75998L5.39336 6.60665C6.34241 8.27568 7.72432 9.65759 9.39336 10.6066L10.24 9.75998C10.4213 9.58072 10.6501 9.45726 10.8994 9.40409C11.1488 9.35092 11.4081 9.37031 11.6467 9.45998C12.2515 9.68566 12.88 9.8422 13.52 9.92665C13.8439 9.97234 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.953 14.6667 11.28Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<span>(801) 792-6505</span>
+					</a>
+
+					<a href="mailto:parker@saltypeakssolutions.com" class="contact-item">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2.66669 2.66669H13.3334C14.0667 2.66669 14.6667 3.26669 14.6667 4.00002V12C14.6667 12.7334 14.0667 13.3334 13.3334 13.3334H2.66669C1.93335 13.3334 1.33335 12.7334 1.33335 12V4.00002C1.33335 3.26669 1.93335 2.66669 2.66669 2.66669Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M14.6667 4L8.00002 8.66667L1.33335 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<span>parker@saltypeakssolutions.com</span>
+					</a>
+
+					<a href="tel:8016995307" class="contact-item">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6494 14.555 13.8195C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.63 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46002 12.5667C5.84926 11.5431 4.48359 10.1774 3.46002 8.56665C2.33336 6.82745 1.6322 4.84731 1.41336 2.78665C1.39671 2.60229 1.41862 2.41649 1.4777 2.24106C1.53679 2.06562 1.63175 1.90444 1.75655 1.76773C1.88134 1.63102 2.03324 1.52179 2.20256 1.44702C2.37189 1.37225 2.55493 1.33349 2.74002 1.33332H4.74002C5.06357 1.33013 5.37723 1.4447 5.62248 1.65568C5.86773 1.86665 6.02804 2.15961 6.07336 2.47998C6.15779 3.12003 6.31434 3.74847 6.54002 4.35332C6.62969 4.59193 6.64908 4.85126 6.59591 5.10057C6.54274 5.34988 6.41928 5.57873 6.24002 5.75998L5.39336 6.60665C6.34241 8.27568 7.72432 9.65759 9.39336 10.6066L10.24 9.75998C10.4213 9.58072 10.6501 9.45726 10.8994 9.40409C11.1488 9.35092 11.4081 9.37031 11.6467 9.45998C12.2515 9.68566 12.88 9.8422 13.52 9.92665C13.8439 9.97234 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.953 14.6667 11.28Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<span>(801) 699-5307</span>
+					</a>
+				</div>
+			</div>
+
+			<!-- Center Column - Quick Links -->
+			<div class="footer-center">
+				<h3 class="footer-section-heading">QUICK LINKS</h3>
+				<nav class="footer-nav">
+					{quickLinks.map(link => (
+						<a href={link.href} class="footer-nav-link">
+							{link.name}
+						</a>
+					))}
+				</nav>
+			</div>
+
+			<!-- Right Column - Newsletter -->
+			<div class="footer-right">
+				<h3 class="newsletter-heading">JOIN OUR NEWSLETTER</h3>
+				<form class="newsletter-form" action="/subscribe" method="POST">
+					<div class="input-wrapper">
+						<input
+							type="email"
+							name="email"
+							placeholder="EMAIL ADDRESS"
+							required
+							class="newsletter-input"
+						/>
+						<button type="submit" class="newsletter-submit" aria-label="Subscribe to newsletter">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+					</div>
+				</form>
+
+				<div class="social-icons">
+					<a href="#" class="social-icon" aria-label="Twitter">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M17 2.00001C16.37 2.62501 15.62 3.12501 14.79 3.50001C14.37 2.97176 13.8 2.58637 13.1558 2.39831C12.5115 2.21026 11.8276 2.22852 11.1943 2.45035C10.5609 2.67218 10.0086 3.08628 9.61311 3.63708C9.21762 4.18787 9.00001 4.84576 9 5.52001V6.27001C7.68 6.30501 6.37 6.00501 5.19 5.40001C4.01 4.79501 3 3.90501 2.25 2.81251C2.25 2.81251 -0.75 9.81251 6.25 12.8125C4.64 13.9375 2.69 14.5 0.75 14.4375C7.75 18.1875 16.25 14.4375 16.25 5.50001C16.2494 5.29699 16.2294 5.09451 16.19 4.89501C16.88 4.15001 17.37 3.22501 17 2.00001Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
+					<a href="#" class="social-icon" aria-label="Facebook">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M13.5 1.5H11.25C10.2554 1.5 9.30161 1.89509 8.59835 2.59835C7.89509 3.30161 7.5 4.25544 7.5 5.25V7.5H5.25V10.5H7.5V16.5H10.5V10.5H12.75L13.5 7.5H10.5V5.25C10.5 5.05109 10.579 4.86032 10.7197 4.71967C10.8603 4.57902 11.0511 4.5 11.25 4.5H13.5V1.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
+					<a href="#" class="social-icon" aria-label="Instagram">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12.75 1.5H5.25C3.17893 1.5 1.5 3.17893 1.5 5.25V12.75C1.5 14.8211 3.17893 16.5 5.25 16.5H12.75C14.8211 16.5 16.5 14.8211 16.5 12.75V5.25C16.5 3.17893 14.8211 1.5 12.75 1.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M12 8.5425C12.0822 9.1062 11.9874 9.68178 11.7291 10.1898C11.4709 10.6979 11.0615 11.1133 10.5578 11.3788C10.0541 11.6444 9.47987 11.7476 8.91479 11.6743C8.3497 11.601 7.82137 11.3548 7.40532 10.9708C6.98927 10.5867 6.70441 10.0832 6.58848 9.52693C6.47255 8.97069 6.53103 8.39084 6.75583 7.86769C6.98063 7.34455 7.36126 6.90407 7.84706 6.60704C8.33286 6.31 8.89908 6.17076 9.4665 6.20749C10.0463 6.24514 10.5982 6.46071 11.0373 6.82151C11.4764 7.1823 11.7803 7.66885 11.9025 8.2125" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M13.125 4.875H13.1325" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer Bottom -->
+		<div class="footer-divider"></div>
+		<p class="footer-copyright">
+			© {currentYear} Salty Peak Solutions. Official MagneGrip Distributor. All Rights Reserved.
+		</p>
+	</div>
+</footer>
+
+<style>
+	/* ========================================
+	   Footer Section
+	   ======================================== */
+	.footer-section {
+		background: var(--bg-dark);
+		padding: 100px 60px 60px;
+	}
+
+	.footer-container {
+		max-width: 1440px;
+		margin: 0 auto;
+		padding: 80px 120px 60px;
+		position: relative;
+		min-height: 670px;
+		/* Orange as base background */
+		background-image: url("data:image/svg+xml,%3Csvg width='1440' height='468' viewBox='0 0 1440 468' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1440 50.0143C1440 18.8266 1411.76 -4.75015 1381.07 0.817559L41.0739 243.944C17.2909 248.259 0 268.969 0 293.14V417.619C0 445.233 22.3857 467.619 50 467.619H1390C1417.61 467.619 1440 445.233 1440 417.619V50.0143Z' fill='%23CC5700'/%3E%3C/svg%3E%0A");
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: 100% auto;
+	}
+
+	/* Blue shape on top */
+	.footer-container::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url("data:image/svg+xml,%3Csvg width='1440' height='665' viewBox='0 0 1440 665' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50.0057C0 20.2576 25.8165 -2.91039 55.3912 0.297154L1395.39 145.628C1420.77 148.38 1440 169.809 1440 195.336V614.29C1440 641.904 1417.61 664.29 1390 664.29H50C22.3857 664.29 0 641.904 0 614.29V50.0057Z' fill='%23030726'/%3E%3C/svg%3E%0A");
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: 100% 100%;
+		z-index: 1;
+	}
+
+	/* Footer Content Grid */
+	.footer-content {
+		position: relative;
+		z-index: 2;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1.5fr;
+		gap: 100px;
+		margin-bottom: 60px;
+	}
+
+	/* ========================================
+	   Left Column - Logo & Contact
+	   ======================================== */
+	.footer-left {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.footer-logo {
+		margin-bottom: 32px;
+	}
+
+	.footer-logo img {
+		width: 150px;
+		height: auto;
+	}
+
+	.footer-tagline {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		color: #D8D8D8;
+		max-width: 400px;
+		margin: 0 0 32px 0;
+	}
+
+	.contact-info-list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.contact-item {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		font-family: 'Roboto', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 18.4px;
+		color: #D8D8D8;
+		text-decoration: none;
+		transition: color var(--transition-fast);
+	}
+
+	.contact-item:hover {
+		color: var(--primary-orange);
+	}
+
+	.contact-item svg {
+		flex-shrink: 0;
+	}
+
+	.contact-item span {
+		word-break: break-word;
+	}
+
+	/* ========================================
+	   Center Column - Quick Links
+	   ======================================== */
+	.footer-center {
+		display: flex;
+		flex-direction: column;
+		padding-top: 180px;
+	}
+
+	.footer-section-heading {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 18.4px;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		margin: 0 0 24px 0;
+	}
+
+	.footer-nav {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.footer-nav-link {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 18.4px;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: color var(--transition-fast);
+	}
+
+	.footer-nav-link:hover {
+		color: var(--primary-orange);
+	}
+
+	/* ========================================
+	   Right Column - Newsletter
+	   ======================================== */
+	.footer-right {
+		display: flex;
+		flex-direction: column;
+		padding-top: 180px;
+	}
+
+	.newsletter-heading {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 24px;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		margin: 0 0 32px 0;
+	}
+
+	.newsletter-form {
+		margin-bottom: 40px;
+	}
+
+	.input-wrapper {
+		position: relative;
+		max-width: 400px;
+	}
+
+	.newsletter-input {
+		width: 100%;
+		height: 40px;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid #FFFFFF;
+		padding: 12px 50px 12px 0;
+		font-family: 'Quicksand', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		outline: none;
+		transition: border-color var(--transition-fast);
+	}
+
+	.newsletter-input::placeholder {
+		color: rgba(255, 255, 255, 0.7);
+	}
+
+	.newsletter-input:focus {
+		border-bottom-color: var(--primary-orange);
+	}
+
+	.newsletter-submit {
+		position: absolute;
+		right: 0;
+		bottom: 5px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		color: #FFFFFF;
+		transition: color var(--transition-fast);
+		padding: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.newsletter-submit:hover {
+		color: var(--primary-orange);
+	}
+
+	/* Social Icons */
+	.social-icons {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+	}
+
+	.social-icon {
+		width: 40px;
+		height: 40px;
+		border: 1px solid #FFFFFF;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: transparent;
+		text-decoration: none;
+		transition: all var(--transition-fast);
+	}
+
+	.social-icon:hover {
+		background: var(--primary-orange);
+		border-color: var(--primary-orange);
+	}
+
+	/* ========================================
+	   Footer Bottom
+	   ======================================== */
+	.footer-divider {
+		width: 100%;
+		height: 1px;
+		background: #FFFFFF;
+		margin: 0 0 40px 0;
+		position: relative;
+		z-index: 2;
+	}
+
+	.footer-copyright {
+		font-family: 'Roboto', sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 27px;
+		color: #FFFFFF;
+		text-align: center;
+		margin: 0;
+		position: relative;
+		z-index: 2;
+	}
+
+	/* ========================================
+	   Responsive Styles
+	   ======================================== */
+	@media (max-width: 1400px) {
+		.footer-section {
+			padding: 80px 40px 50px;
+		}
+
+		.footer-container {
+			padding: 60px 80px 50px;
+		}
+
+		.footer-content {
+			gap: 60px;
+		}
+
+		.footer-center,
+		.footer-right {
+			padding-top: 150px;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		.footer-section {
+			padding: 70px 40px 50px;
+		}
+
+		.footer-container {
+			padding: 50px 60px 40px;
+			min-height: auto;
+			border-radius: 40px;
+			/* Replace SVG backgrounds with solid colors on tablet */
+			background-image: none;
+			background: linear-gradient(to bottom, #030726 78%, #CC5700 78%);
+		}
+
+		.footer-container::before {
+			display: none;
+		}
+
+		.footer-content {
+			gap: 40px;
+		}
+
+		.footer-center,
+		.footer-right {
+			padding-top: 0;
+		}
+
+		.footer-tagline {
+			max-width: 350px;
+		}
+
+		.newsletter-heading {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.footer-section {
+			padding: 60px 40px;
+		}
+
+		.footer-container {
+			padding: 50px 40px 40px;
+			background: linear-gradient(to bottom, #030726 82%, #CC5700 82%);
+		}
+
+		.footer-content {
+			grid-template-columns: 1fr 1fr;
+			gap: 40px;
+		}
+
+		.footer-left {
+			grid-column: 1 / -1;
+			max-width: 100%;
+		}
+
+		.footer-tagline {
+			max-width: 100%;
+		}
+
+		.newsletter-form {
+			margin-bottom: 32px;
+		}
+
+		.input-wrapper {
+			max-width: 100%;
+		}
+	}
+
+	@media (max-width: 850px) {
+		.footer-section {
+			padding: 50px 32px;
+		}
+
+		.footer-container {
+			padding: 40px 32px;
+			border-radius: 30px;
+		}
+
+		.footer-content {
+			grid-template-columns: 1fr;
+			gap: 36px;
+		}
+
+		.footer-center,
+		.footer-right {
+			padding-top: 0;
+		}
+
+		.footer-tagline {
+			font-size: 15px;
+			line-height: 22px;
+		}
+
+		.contact-item {
+			font-size: 15px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.footer-section {
+			padding: 50px 24px;
+		}
+
+		.footer-container {
+			padding: 36px 24px;
+			border-radius: 24px;
+			background: linear-gradient(to bottom, #030726 83%, #CC5700 83%);
+		}
+
+		.footer-content {
+			grid-template-columns: 1fr;
+			gap: 32px;
+		}
+
+		.footer-left,
+		.footer-center,
+		.footer-right {
+			text-align: left;
+			padding-top: 0;
+		}
+
+		.footer-logo {
+			margin-bottom: 20px;
+		}
+
+		.footer-logo img {
+			width: 120px;
+		}
+
+		.footer-tagline {
+			font-size: 15px;
+			line-height: 22px;
+			margin-bottom: 20px;
+		}
+
+		.contact-info-list {
+			gap: 14px;
+		}
+
+		.contact-item {
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		.footer-section-heading {
+			font-size: 14px;
+			margin-bottom: 18px;
+		}
+
+		.footer-nav {
+			gap: 16px;
+		}
+
+		.footer-nav-link {
+			font-size: 14px;
+		}
+
+		.newsletter-heading {
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 20px;
+		}
+
+		.newsletter-form {
+			margin-bottom: 28px;
+		}
+
+		.newsletter-input {
+			font-size: 14px;
+			height: 36px;
+		}
+
+		.social-icons {
+			justify-content: flex-start;
+			gap: 14px;
+		}
+
+		.social-icon {
+			width: 36px;
+			height: 36px;
+		}
+
+		.social-icon svg {
+			width: 15px;
+			height: 15px;
+		}
+
+		.footer-divider {
+			margin-bottom: 24px;
+		}
+
+		.footer-copyright {
+			font-size: 13px;
+			line-height: 20px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.footer-section {
+			padding: 40px 16px;
+		}
+
+		.footer-container {
+			padding: 28px 16px;
+			border-radius: 16px;
+			background: linear-gradient(to bottom, #030726 86%, #CC5700 86%);
+		}
+
+		.footer-content {
+			gap: 28px;
+		}
+
+		.footer-logo {
+			margin-bottom: 16px;
+		}
+
+		.footer-logo img {
+			width: 100px;
+		}
+
+		.footer-tagline {
+			font-size: 13px;
+			line-height: 19px;
+			margin-bottom: 16px;
+		}
+
+		.contact-info-list {
+			gap: 12px;
+		}
+
+		.contact-item {
+			font-size: 13px;
+			line-height: 16px;
+			gap: 10px;
+		}
+
+		.contact-item svg {
+			width: 14px;
+			height: 14px;
+		}
+
+		.footer-section-heading {
+			font-size: 13px;
+			margin-bottom: 14px;
+		}
+
+		.footer-nav {
+			gap: 14px;
+		}
+
+		.footer-nav-link {
+			font-size: 13px;
+		}
+
+		.newsletter-heading {
+			font-size: 14px;
+			line-height: 18px;
+			margin-bottom: 16px;
+		}
+
+		.newsletter-form {
+			margin-bottom: 24px;
+		}
+
+		.newsletter-input {
+			font-size: 13px;
+			height: 34px;
+			padding: 10px 45px 10px 0;
+		}
+
+		.newsletter-submit {
+			padding: 4px;
+		}
+
+		.newsletter-submit svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		.social-icons {
+			gap: 12px;
+		}
+
+		.social-icon {
+			width: 32px;
+			height: 32px;
+		}
+
+		.social-icon svg {
+			width: 14px;
+			height: 14px;
+		}
+
+		.footer-divider {
+			margin-bottom: 20px;
+		}
+
+		.footer-copyright {
+			font-size: 11px;
+			line-height: 16px;
+		}
+	}
+</style>
