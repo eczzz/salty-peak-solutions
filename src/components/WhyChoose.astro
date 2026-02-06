@@ -90,7 +90,7 @@
 	.why-choose-section {
 		background: var(--bg-dark);
 		padding: 100px 60px;
-		overflow-x: hidden;
+		overflow: visible;
 	}
 
 	.why-choose-section * {
@@ -117,13 +117,14 @@
 		grid-template-columns: minmax(0, 580px) minmax(0, 583px);
 		gap: 130px;
 		align-items: stretch;
-		overflow: hidden;
+		overflow: visible;
 	}
 
 	/* Left Column - Content */
 	.why-choose-content {
 		display: flex;
 		flex-direction: column;
+		overflow: visible;
 	}
 
 	.why-choose-pill {
@@ -177,10 +178,12 @@
 		position: relative;
 		margin-bottom: 35px;
 		transition: transform 0.4s ease;
+		overflow: visible;
 	}
 
 	.mission-card:hover {
 		transform: translateY(-5px);
+		filter: drop-shadow(0 8px 20px rgba(232, 131, 58, 0.5));
 	}
 
 	.mission-card-bg {
@@ -191,10 +194,6 @@
 		height: 100%;
 		z-index: 0;
 		transition: all 0.4s ease;
-	}
-
-	.mission-card:hover .mission-card-bg path {
-		filter: drop-shadow(0 8px 25px rgba(232, 131, 58, 0.3));
 	}
 
 	.mission-text {
@@ -247,8 +246,8 @@
 
 	.mission-arrow-btn {
 		position: absolute;
-		top: 4px;
-		right: 4px;
+		top: 8px;
+		right: 8px;
 		width: 60px;
 		height: 39px;
 		background: #CC5700;
@@ -260,13 +259,14 @@
 		text-decoration: none;
 		transition: all 0.3s ease;
 		z-index: 2;
+		overflow: visible;
 	}
 
 	.mission-arrow-btn:hover {
 		transform: scale(1.15) rotate(45deg);
 		background: var(--primary-gold);
 		border-color: var(--primary-gold);
-		box-shadow: 0 0 20px rgba(244, 185, 75, 0.5);
+		box-shadow: 0 0 25px rgba(244, 185, 75, 0.7);
 	}
 
 	.mission-arrow-btn svg {
@@ -283,6 +283,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+		overflow: visible;
 	}
 
 	.feature-item {
@@ -294,6 +295,7 @@
 		padding-bottom: 22px;
 		text-decoration: none;
 		transition: all 0.3s ease;
+		overflow: visible;
 	}
 
 	.feature-item:first-child {
@@ -328,12 +330,15 @@
 		justify-content: center;
 		flex-shrink: 0;
 		transition: all 0.3s ease;
+		overflow: visible;
+		border-radius: 50%;
 	}
 
 	.feature-arrow-circle > svg:first-child {
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		transition: all 0.3s ease;
 	}
 
@@ -347,12 +352,16 @@
 
 	.feature-item:hover .feature-arrow-circle {
 		transform: scale(1.15) rotate(45deg);
+		filter: drop-shadow(0 0 12px rgba(244, 185, 75, 0.8));
+	}
+
+	.feature-item:hover .feature-arrow-circle > svg:first-child {
+		transform: translate(-50%, -50%);
 	}
 
 	.feature-item:hover .feature-arrow-circle > svg:first-child circle {
 		fill: var(--primary-gold);
 		stroke: var(--primary-gold);
-		filter: drop-shadow(0 0 10px rgba(244, 185, 75, 0.5));
 	}
 
 	.feature-item:hover .feature-arrow-circle .arrow-icon {
@@ -364,7 +373,7 @@
 	.why-choose-visual {
 		position: relative;
 		max-width: 100%;
-		overflow: hidden;
+		overflow: visible;
 	}
 
 	.why-choose-image-wrapper {
@@ -375,8 +384,8 @@
 		min-height: calc(100% + 80px);
 		margin-top: calc(-3rem + 8px);
 		transition: transform 0.4s ease;
-		overflow: hidden;
 		border-radius: 24px;
+		overflow: visible;
 	}
 
 	.why-choose-image-wrapper:hover {
@@ -388,6 +397,7 @@
 		height: 100%;
 		object-fit: cover;
 		transition: transform 0.6s ease, filter 0.4s ease;
+		border-radius: 24px;
 	}
 
 	.why-choose-image-wrapper:hover .why-choose-image {
@@ -524,8 +534,8 @@
 			min-height: 177px;
 			background: #030726;
 			border-radius: 24px;
-			overflow: hidden;
 			padding-right: 80px;
+			overflow: visible;
 		}
 
 		.mission-card:hover {
@@ -567,7 +577,6 @@
 	@media (max-width: 768px) {
 		.why-choose-section {
 			padding: 60px 24px;
-			overflow: hidden;
 		}
 
 		.why-choose-container {
@@ -661,8 +670,7 @@
 
 	@media (max-width: 480px) {
 		.why-choose-section {
-			padding: 40px 20px;
-			overflow: hidden;
+			padding: 40px 24px;
 		}
 
 		.why-choose-container {

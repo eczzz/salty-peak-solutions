@@ -222,7 +222,7 @@ import Button from './Button.astro';
 	.stats-card {
 		position: absolute;
 		bottom: 24px;
-		left: -200px;
+		left: -280px;
 		width: 347px;
 		background: #030726;
 		border-radius: var(--border-radius-lg);
@@ -356,7 +356,7 @@ import Button from './Button.astro';
 		}
 
 		.stats-card {
-			left: -120px;
+			left: -230px;
 			width: 280px;
 			padding: 24px 20px 32px;
 		}
@@ -483,19 +483,24 @@ import Button from './Button.astro';
 
 		.stats-card {
 			padding: 24px;
-			max-width: 100%;
+			max-width: none;
+			width: calc(100% + 48px);
+			margin-left: -24px;
 			gap: 16px;
 			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: center;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+		}
+
+		.hero-image-wrapper::before {
+			display: none;
 		}
 
 		.stat-item {
-			flex: 1 1 auto;
-			min-width: 100px;
+			flex: 1;
 			text-align: center;
 			align-items: center;
-			padding: 10px;
+			padding: 10px 6px;
 		}
 
 		.stat-item:hover {
@@ -503,13 +508,14 @@ import Button from './Button.astro';
 		}
 
 		.stat-number {
-			font-size: 24px;
-			line-height: 30px;
+			font-size: 22px;
+			line-height: 28px;
 		}
 
 		.stat-label {
-			font-size: 14px;
-			line-height: 18px;
+			font-size: 11px;
+			line-height: 15px;
+			word-wrap: break-word;
 		}
 	}
 
@@ -562,24 +568,26 @@ import Button from './Button.astro';
 		}
 
 		.stats-card {
-			padding: 20px 16px;
+			padding: 16px 12px;
 			border-radius: 16px;
-			gap: 12px;
+			gap: 8px;
+			flex-wrap: nowrap;
+			width: calc(100% + 32px);
+			margin-left: -16px;
 		}
 
 		.stat-item {
-			min-width: 80px;
-			padding: 8px;
+			padding: 6px 4px;
 		}
 
 		.stat-number {
-			font-size: 20px;
-			line-height: 26px;
+			font-size: 18px;
+			line-height: 24px;
 		}
 
 		.stat-label {
-			font-size: 12px;
-			line-height: 16px;
+			font-size: 10px;
+			line-height: 14px;
 		}
 	}
 </style>

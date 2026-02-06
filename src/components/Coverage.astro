@@ -62,6 +62,7 @@
 		background: var(--bg-dark);
 		padding: 100px 60px;
 		position: relative;
+		overflow-x: hidden;
 	}
 
 	/* Scroll Animation Styles */
@@ -192,7 +193,8 @@
 
 	.map-iframe {
 		width: 100%;
-		height: 100%;
+		height: calc(100% + 56px);
+		margin-top: -56px;
 		border: none;
 	}
 
@@ -277,6 +279,7 @@
 		align-items: center;
 		justify-content: center;
 		width: 186px;
+		max-width: 100%;
 		height: 47px;
 		background: var(--primary-orange);
 		border-radius: 24px;
@@ -290,6 +293,7 @@
 		align-self: flex-start;
 		box-shadow: 0 4px 15px rgba(232, 131, 58, 0.3);
 		white-space: nowrap;
+		box-sizing: border-box;
 	}
 
 	.coverage-contact-btn:hover {
@@ -337,8 +341,8 @@
 		}
 	}
 
-	/* Tablet layout - switch to card-based layout at 1200px */
-	@media (max-width: 1200px) {
+	/* Tablet layout - switch to card-based layout at 1300px */
+	@media (max-width: 1300px) {
 		.coverage-section {
 			padding: 60px 40px;
 		}
@@ -346,7 +350,8 @@
 		.coverage-folder {
 			background: #030726;
 			border-radius: 24px;
-			padding: 48px 40px;
+			padding: 48px 40px 60px;
+			overflow: hidden;
 		}
 
 		/* Hide the SVG background on tablet */
@@ -379,13 +384,15 @@
 			padding: 0;
 		}
 
-		/* Keep side-by-side layout on larger tablets */
+		/* Stack the grid vertically */
 		.coverage-grid {
-			gap: 40px;
+			flex-direction: column;
+			gap: 32px;
 		}
 
 		.coverage-map {
-			flex: 0 0 45%;
+			flex: none;
+			width: 100%;
 		}
 
 		.map-container {
@@ -394,7 +401,7 @@
 		}
 
 		.coverage-content {
-			flex: 1;
+			width: 100%;
 			height: auto;
 			margin-left: 0;
 		}
@@ -408,13 +415,13 @@
 		}
 
 		.states-grid {
-			gap: 14px 20px;
+			gap: 14px 24px;
 			max-width: 100%;
 		}
 
 		.state-item {
-			font-size: 16px;
-			line-height: 22px;
+			font-size: 17px;
+			line-height: 24px;
 		}
 
 		.state-divider {
@@ -427,55 +434,9 @@
 			font-size: 14px;
 			padding: 11px 32px;
 			border-radius: 24px;
-		}
-	}
-
-	/* Smaller tablet - stack vertically */
-	@media (max-width: 850px) {
-		.coverage-section {
-			padding: 50px 32px;
-		}
-
-		.coverage-folder {
-			padding: 40px 32px;
-		}
-
-		.coverage-main-heading {
-			font-size: 32px;
-			line-height: 40px;
-			margin-bottom: 32px;
-		}
-
-		/* Stack the grid vertically */
-		.coverage-grid {
-			flex-direction: column;
-			gap: 32px;
-		}
-
-		.coverage-map {
-			flex: none;
-			width: 100%;
-		}
-
-		.map-container {
-			height: 280px;
-		}
-
-		.coverage-content {
-			width: 100%;
-		}
-
-		.states-grid {
-			gap: 14px 24px;
-		}
-
-		.state-item {
-			font-size: 17px;
-			line-height: 24px;
-		}
-
-		.coverage-contact-btn {
 			margin-top: 8px;
+			grid-column: 1 / -1;
+			justify-self: start;
 		}
 	}
 
@@ -486,7 +447,7 @@
 		}
 
 		.coverage-folder {
-			padding: 36px 24px;
+			padding: 36px 24px 48px;
 			border-radius: 20px;
 		}
 
@@ -546,7 +507,7 @@
 		}
 
 		.coverage-folder {
-			padding: 32px 20px;
+			padding: 32px 20px 44px;
 			border-radius: 16px;
 		}
 
